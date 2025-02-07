@@ -17,7 +17,7 @@ func HTTPGetNote(rw http.ResponseWriter, rq *http.Request) {
 		panic(err)
 	}
 
-	note := &model.Note{
+	var note *model.Note = &model.Note{
 		ID:       int64(i),
 		Title:    "Fevzi",
 		Context:  "Context",
